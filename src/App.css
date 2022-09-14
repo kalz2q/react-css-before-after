@@ -1,22 +1,18 @@
 .App {
   text-align: center;
   background-color: #477be3;
-
-  /* min-height: 100vh; */
-  /* min-height: 50vh; */
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: center; */
-  /* justify-content: center; */
-  /* font-size: calc(10px + 2vmin); */
-  /* color: white; */
+  height: 100vh;
 }
 
 .content-after {
   position: relative;
-  width: 50px;
+  width: 150px;
   height: 100px;
   background-color: #ff6767;
+}
+
+.content-after::before {
+  content: "hai   ";
 }
 .content-after::after {
   position: absolute;
@@ -41,6 +37,7 @@
   display: inline-block;
   position: relative;
 }
+
 .contact-btn::after {
   position: absolute;
   content: "";
@@ -55,3 +52,54 @@
   bottom: 0;
   margin: auto;
 }
+
+.box1::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: rebeccapurple;
+  border: 5px solid black;
+  border-radius: 50% 80% 20% 70%;
+}
+
+.box1::after {
+  content: "";
+  display: block;
+  right: 10;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border: 5px solid black;
+  border-radius: 50% 80% 20% 70%;
+}
+.arrow_box {
+  position: relative;
+  background: #88b7d5;
+  border: 7px solid #c2e1f5;
+}
+.arrow_box:after,
+.arrow_box:before {
+  left: 90%;
+  top: 50%;
+  /* border: solid transparent; */
+  border: solid 5px black;
+  content: "";
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  pointer-events: none;
+}
+
+.arrow_box:after {
+  border-color: rgba(136, 183, 213, 0);
+  border-left-color: #88b7d5;
+  border-width: 5px;
+  margin-top: -50px;
+}
+/* .arrow_box:before {
+  border-color: rgba(194, 225, 245, 0);
+  border-left-color: #c2e1f5;
+  border-width: 6px;
+  margin-top: -60px;
+} */
